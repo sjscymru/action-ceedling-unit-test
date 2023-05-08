@@ -6,6 +6,10 @@ inputs:
     required: true
    
 runs:
-  using: node16
-  main: entrypoint.sh
+  using: 'composite'
+  steps:
+   - run: chmod +x ${{ github.action_path }}/entrypoint.sh
+     shell: bash
+   - run: ${{ github.action_path }}/entrypoint.sh ${{ inputs.unit-test-path }}
+     shell: bash
 
