@@ -1,15 +1,10 @@
 #!/bin/bash
 
-while getopts p: flag
-do
-    case "${flag}" in
-        p) pathname=${OPTARG};;
-    esac
-done
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Install Ruby
-chmod +x install_ruby.sh
-./install-ruby.sh
+chmod +x $SCRIPT_DIR/install_ruby.sh
+./SCRIPT_DIR/install-ruby.sh
 
 # Install dependencies
 sudo apt-get update
@@ -19,8 +14,8 @@ sudo apt-get install -y coreutils gcc gcovr valgrind libc-dev
 sudo gem install --force ceedling:0.31.1
 
 # Navigate to unit tests
-echo 'Attempting to run unit tests at location:' $pathname
-cd $pathname
+echo 'Attempting to run unit tests at location:' $1
+cd $1
 ls
 
 # Run unit tests
