@@ -1,0 +1,15 @@
+name: 'Run Ceedling Unit Tests'
+description: 'Run the unit test using Ceedling framework'
+inputs:
+  unit-test-path: # path to Ceedling project.yml file
+    description: 'Path to Ceedling project.yml file'
+    required: true
+   
+runs:
+  using: 'composite'
+  steps:
+   - run: chmod +x ${{ github.action_path }}/entrypoint.sh
+     shell: bash
+   - run: ${{ github.action_path }}/entrypoint.sh ${{ inputs.unit-test-path }}
+     shell: bash
+
