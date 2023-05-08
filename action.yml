@@ -10,6 +10,6 @@ runs:
   steps:
    - run: chmod +x ${{ github.action_path }}/entrypoint.sh
      shell: bash
-   - run: ${{ github.action_path }}/entrypoint.sh ${{ inputs.unit-test-path }}
+   - run: ${{ github.action_path }}/entrypoint.sh -p ${{ inputs.unit-test-path }}
      shell: bash
 
