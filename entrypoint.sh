@@ -19,7 +19,7 @@ sudo apt-get install -y coreutils gcc gcovr valgrind libc-dev
 sudo gem install --force ceedling:0.31.1
 
 # Navigate to unit tests
-echo 'Attempting to run unit tests at location:' $pathname;
+echo 'Attempting to run unit tests at location:' $pathname
 cd $pathname
 ls
 
