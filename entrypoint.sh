@@ -8,7 +8,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Install dependencies
 sudo apt-get update
-sudo apt-get install -y coreutils gcc gcovr valgrind libc-dev
+sudo apt-get install -y coreutils gcc gcc-multilib gcovr valgrind libc-dev
 
 # Install ceedling
 sudo gem install --force ceedling:0.31.1
