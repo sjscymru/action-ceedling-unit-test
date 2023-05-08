@@ -12,7 +12,7 @@ sudo apt-get install -y coreutils gcc gcovr valgrind libc-dev
 gem install --force ceedling:0.31.1
 
 # Navigate to unit tests
-cd $GITHUB_WORKSPACE/$UNIT_TEST_PATH
+cd %1
 
 # Run unit tests
 ceedling test:all
