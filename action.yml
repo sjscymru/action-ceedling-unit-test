@@ -8,7 +8,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-   - uses: actions/setup-ruby@v1
+   - uses: ruby/setup-ruby@v1
      with:
        ruby-version: '2.7.1'
    - run: chmod +x ${{ github.action_path }}/entrypoint.sh
