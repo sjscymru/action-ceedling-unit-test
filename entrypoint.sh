@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get install -y coreutils gcc gcovr valgrind libc-dev
 
 # Install ceedling
-gem install --force ceedling:0.31.1
+sudo gem install --force ceedling:0.31.1
 
 # Navigate to unit tests
 cd %1
