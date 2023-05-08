@@ -15,4 +15,3 @@ runs:
      shell: bash
    - run: ${{ github.action_path }}/entrypoint.sh ${{ inputs.unit-test-path }}
      shell: bash
-
