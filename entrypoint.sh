@@ -3,8 +3,8 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Install Ruby
-chmod +x $SCRIPT_DIR/install_ruby.sh
-./SCRIPT_DIR/install-ruby.sh
+# chmod +x $SCRIPT_DIR/install_ruby.sh
+# ./SCRIPT_DIR/install-ruby.sh
 
 # Install dependencies
 sudo apt-get update
